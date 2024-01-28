@@ -6,4 +6,8 @@
  */
 
 // 請在下方寫下你的程式碼
-
+export async function fetchData(url: string) {
+  return await fetch(url)
+    .then((res) => res.json())
+    .catch((err) => console.error(err));
+}
